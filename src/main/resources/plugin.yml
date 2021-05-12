@@ -1,0 +1,20 @@
+name: SausageSMP.main
+version: 1.1.0.0
+main: sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main
+api-version: 1.16
+authors: [ CorruptSausage ]
+description: Base
+## All commands:
+commands:
+  gms:
+    description: Changes gamemode to survival
+    usage: /<command>
+  gmc:
+    description: Changes gamemode to creative
+    usage: /<command>
+
+## Gui commands:
+  worldmenu:
+    description: Opens world options/
+    usage: /<command>
+
