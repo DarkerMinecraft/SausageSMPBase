@@ -26,7 +26,8 @@ public final class main extends JavaPlugin {
             if(this.getDescription().getVersion().equalsIgnoreCase(version)){
                 System.out.println("Plugin is running latest version.");
             }else{
-                System.out.println("Plugin has an update!");
+                System.out.println("Plugin has an update:");
+                System.out.println("Please download it at: https://www.spigotmc.org/resources/sausagesmp.92295/");
             }
         });
 
