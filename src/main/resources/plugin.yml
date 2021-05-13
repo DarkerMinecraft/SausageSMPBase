@@ -24,6 +24,9 @@ commands:
   v:
     description: Shortcut for vanish
     usage: /<command>
+  fly:
+    description: Enables/disables flight.
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:
