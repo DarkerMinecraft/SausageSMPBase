@@ -18,6 +18,12 @@ commands:
   night:
     description: Changes to nighttime
     usage: /<command>
+  vanish:
+    description: Changes player visibility
+    usage: /<command>
+  v:
+    description: Shortcut for vanish
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:

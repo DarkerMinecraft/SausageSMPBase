@@ -11,7 +11,7 @@ public class nightTimeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
-        if(player.hasPermission("core.weather")){
+        if(player.hasPermission("core.time")){
             player.getLocation().getWorld().setTime(13000);
             player.sendMessage(ChatColor.GREEN + "Time has been changed.");
         }else{

@@ -1,13 +1,16 @@
 package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP;
 
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils.UpdateChecker;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.dayTimeCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.gmc;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.gms;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.nightTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
+
+import java.util.ArrayList;
 
 public final class main extends JavaPlugin {
+
+    //Vanish command
+    public ArrayList<Player> vanish_list = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -32,6 +35,8 @@ public final class main extends JavaPlugin {
         this.getCommand("gmc").setExecutor(new gmc());
         this.getCommand("day").setExecutor(new dayTimeCommand());
         this.getCommand("night").setExecutor(new nightTimeCommand());
+        this.getCommand("vanish").setExecutor(new VanishCommand(this));
+        this.getCommand("v").setExecutor(new VanishCommand(this));
 
       //GuiCommands:
 
