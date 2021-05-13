@@ -1,11 +1,11 @@
 package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.GuiCommands.WorldMenu;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.GuiEvents.cancelguimovement;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils.UpdateChecker;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.dayTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.gmc;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.gms;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.nightTimeCommand;
 
 public final class main extends JavaPlugin {
 
@@ -30,16 +30,18 @@ public final class main extends JavaPlugin {
       //commands:
         this.getCommand("gms").setExecutor(new gms());
         this.getCommand("gmc").setExecutor(new gmc());
+        this.getCommand("day").setExecutor(new dayTimeCommand());
+        this.getCommand("night").setExecutor(new nightTimeCommand());
 
       //GuiCommands:
-      this.getCommand("worldmenu").setExecutor(new WorldMenu());
+
 
       //Events:
 
 
 
       //Gui Events:
-        getServer().getPluginManager().registerEvents(new cancelguimovement(), this);
+
     }
 
 

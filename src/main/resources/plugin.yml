@@ -12,6 +12,12 @@ commands:
   gmc:
     description: Changes gamemode to creative
     usage: /<command>
+  day:
+    description: Changes to daytime
+    usage: /<command>
+  night:
+    description: Changes to nighttime
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:
