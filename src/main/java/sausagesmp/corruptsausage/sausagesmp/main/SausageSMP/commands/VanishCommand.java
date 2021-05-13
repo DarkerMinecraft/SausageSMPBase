@@ -30,7 +30,11 @@ public class VanishCommand implements CommandExecutor {
                         p.sendMessage(ChatColor.AQUA + "Vanish has been disabled.");
                     } else if (!plugin.vanish_list.contains(p)) {
                         for (Player players : Bukkit.getOnlinePlayers()) {
-                            players.hidePlayer(plugin, p);
+                            if(players.hasPermission("core.vanish")){
+                                players.hidePlayer(plugin, p);
+                            }else{
+                                players.hidePlayer(plugin, p);
+                            }
                         }
                         plugin.vanish_list.add(p);
                         p.sendMessage(ChatColor.AQUA + "Vanish has been enabled.");
@@ -47,7 +51,11 @@ public class VanishCommand implements CommandExecutor {
                         plugin.vanish_list.remove(t);
                     } else if (!plugin.vanish_list.contains(t)) {
                         for (Player players : Bukkit.getOnlinePlayers()) {
-                            players.hidePlayer(plugin, t);
+                            if(players.hasPermission("core.vanish")){
+                                players.showPlayer(plugin, t);
+                            }else{
+                                players.hidePlayer(plugin, t);
+                            }
                         }
                         t.sendMessage(ChatColor.AQUA + "Vanish has been enabled.");
                         p.sendMessage(ChatColor.GREEN + "Vanish has been " + ChatColor.YELLOW + "Enabled. " + ChatColor.GREEN + "for " + ChatColor.YELLOW + t.getDisplayName());
