@@ -2,6 +2,10 @@ package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyEasy;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyHard;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyNormal;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyPeacefull;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils.UpdateChecker;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
 
@@ -42,6 +46,10 @@ public final class main extends JavaPlugin {
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
         this.getCommand("info").setExecutor(new InfoCommand());
+        this.getCommand("easy").setExecutor(new DifficultyEasy());
+        this.getCommand("normal").setExecutor(new DifficultyNormal());
+        this.getCommand("hard").setExecutor(new DifficultyHard());
+        this.getCommand("peaceful").setExecutor(new DifficultyPeacefull());
 
       //GuiCommands:
 

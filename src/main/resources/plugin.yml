@@ -30,6 +30,18 @@ commands:
   info:
     description: Gives information
     usage: /<command>
+  easy:
+    description: Changes difficulty to easy
+    usage: /<command>
+  normal:
+    description: Changes difficulty to normal
+    usage: /<command>
+  hard:
+    description: Changes difficulty to hard
+    usage: /<command>
+  peaceful:
+    description: Changes difficulty to peaceful
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:

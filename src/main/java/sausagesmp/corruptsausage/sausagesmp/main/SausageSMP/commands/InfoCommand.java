@@ -22,6 +22,10 @@ public class InfoCommand implements CommandExecutor {
                 player.sendMessage(ChatColor.GREEN + "/gms (core.gamemode)");
                 player.sendMessage(ChatColor.GREEN + "/fly (core.fly)");
                 player.sendMessage(ChatColor.GREEN + "/Vanish (core.vanish)");
+                player.sendMessage(ChatColor.GREEN + "/peaceful (core.difficulty)");
+                player.sendMessage(ChatColor.GREEN + "/easy (core.difficulty)");
+                player.sendMessage(ChatColor.GREEN + "/normal (core.difficulty)");
+                player.sendMessage(ChatColor.GREEN + "/hard (core.difficulty)");
                 player.sendMessage(ChatColor.GREEN + "/info (Staff)");
                 player.sendMessage(ChatColor.GREEN + "--------------------");
             }else{
