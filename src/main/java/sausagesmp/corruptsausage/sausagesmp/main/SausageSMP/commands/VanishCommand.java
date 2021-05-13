@@ -31,7 +31,7 @@ public class VanishCommand implements CommandExecutor {
                     } else if (!plugin.vanish_list.contains(p)) {
                         for (Player players : Bukkit.getOnlinePlayers()) {
                             if(players.hasPermission("core.vanish")){
-                                players.hidePlayer(plugin, p);
+                                players.showPlayer(plugin, p);
                             }else{
                                 players.hidePlayer(plugin, p);
                             }
@@ -53,7 +53,7 @@ public class VanishCommand implements CommandExecutor {
                         for (Player players : Bukkit.getOnlinePlayers()) {
                             if(players.hasPermission("core.vanish")){
                                 players.showPlayer(plugin, t);
-                            }else{
+                            }else if(!players.hasPermission("core.vanish")){
                                 players.hidePlayer(plugin, t);
                             }
                         }
