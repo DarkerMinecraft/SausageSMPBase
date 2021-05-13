@@ -30,6 +30,7 @@ public class WorldMenu implements CommandExecutor {
             ItemStack timeSign = new ItemStack(Material.ACACIA_WALL_SIGN);
             ItemStack daytime = new ItemStack(Material.LIGHT_BLUE_WOOL);
             ItemStack nighttime = new ItemStack(Material.BLACK_WOOL);
+            ItemStack blackpane = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
             
             
             
@@ -62,14 +63,9 @@ public class WorldMenu implements CommandExecutor {
             
             
 
-            //Replace empty slots with panels:
 
-           for (int i = 0; i < worldmenu.getSize(); i++){
-               ItemStack blackPane = new ItemStack(Material.BLACK_STAINED_GLASS_PANE, 1, (short)15);
-               if(worldmenu.getItem(i) == null || worldmenu.getItem(i).getType().equals(Material.AIR)){
-                   worldmenu.setItem(i, blackPane);
-               }
-           }
+
+
 
             //Put the items in the inventory:
 
@@ -79,8 +75,18 @@ public class WorldMenu implements CommandExecutor {
             };
             worldmenu.setContents(menu_items);
             p.openInventory(worldmenu);
-            
+
+
+            //Replace empty slots with panels:
+            for (int i = 0; i < worldmenu.getSize(); i++){
+                if(worldmenu.getItem(i) == null || worldmenu.getItem(i).getType().equals(Material.AIR)){
+                    worldmenu.setItem(i, blackpane);
+                }
+            }
+
         }
+
+
 
 
 

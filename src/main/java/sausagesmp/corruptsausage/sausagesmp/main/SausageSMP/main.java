@@ -21,6 +21,7 @@ public final class main extends JavaPlugin {
         });
 
 
+
       System.out.println("SausageSMP:");
       System.out.println("Model: Base");
       System.out.println("Status: Loaded and running.");
@@ -29,7 +30,6 @@ public final class main extends JavaPlugin {
       //commands:
         this.getCommand("gms").setExecutor(new gms());
         this.getCommand("gmc").setExecutor(new gmc());
-
 
       //GuiCommands:
       this.getCommand("worldmenu").setExecutor(new WorldMenu());
@@ -41,6 +41,12 @@ public final class main extends JavaPlugin {
       //Gui Events:
         getServer().getPluginManager().registerEvents(new cancelguimovement(), this);
     }
+
+
+
+    //Config
+
+
 
     @Override
     public void onDisable() {
