@@ -26,7 +26,7 @@ public class FlyCommand implements CommandExecutor {
                         p.setAllowFlight(false);
                         plugin.fly_list.remove(p);
                         p.sendMessage(ChatColor.RED + "Flight has been disabled.");
-                    }else if(!plugin.vanish_list.contains(p)){
+                    }else if(!plugin.fly_list.contains(p)){
                         p.setAllowFlight(true);
                         plugin.fly_list.add(p);
                         p.sendMessage(ChatColor.GREEN + "Flight has been enabled.");
@@ -38,7 +38,7 @@ public class FlyCommand implements CommandExecutor {
                         t.sendMessage(ChatColor.RED + "Flight has been disabled.");
                         p.sendMessage(ChatColor.GREEN + "Flight has been " + ChatColor.YELLOW +  "Disabled " + ChatColor.GREEN + "for " + ChatColor.YELLOW + t.getDisplayName());
                         plugin.fly_list.remove(t);
-                    }else{
+                    }else if(!plugin.fly_list.contains(t)){
                         t.setAllowFlight(true);
                         t.sendMessage(ChatColor.GREEN + "Flight has been enabled.");
                         p.sendMessage(ChatColor.GREEN + "Flight has been " + ChatColor.YELLOW +  "Enabled " + ChatColor.GREEN + "for " + ChatColor.YELLOW + t.getDisplayName());
