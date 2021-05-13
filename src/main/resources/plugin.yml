@@ -27,6 +27,9 @@ commands:
   fly:
     description: Enables/disables flight.
     usage: /<command>
+  info:
+    description: Gives information
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:

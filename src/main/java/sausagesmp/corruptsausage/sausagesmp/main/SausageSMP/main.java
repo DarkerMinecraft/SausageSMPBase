@@ -41,6 +41,7 @@ public final class main extends JavaPlugin {
         this.getCommand("vanish").setExecutor(new VanishCommand(this));
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
+        this.getCommand("info").setExecutor(new InfoCommand());
 
       //GuiCommands:
 
