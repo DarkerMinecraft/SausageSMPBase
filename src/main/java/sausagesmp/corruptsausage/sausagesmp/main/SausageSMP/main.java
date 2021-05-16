@@ -1,19 +1,19 @@
 package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyEasy;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyHard;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyNormal;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.DifficultyPeacefull;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.FlyCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.VanishCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.gmc;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.gms;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.dayTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.nightTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils.UpdateChecker;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
 
 import java.util.ArrayList;
 
@@ -24,6 +24,8 @@ public final class main extends JavaPlugin {
 
     //Fly Command
     public ArrayList<Player> fly_list = new ArrayList<>();
+
+    public ArrayList<Player> see_vanish_list = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -57,6 +59,7 @@ public final class main extends JavaPlugin {
         this.getCommand("normal").setExecutor(new DifficultyNormal());
         this.getCommand("hard").setExecutor(new DifficultyHard());
         this.getCommand("peaceful").setExecutor(new DifficultyPeacefull());
+        this.getCommand("report").setExecutor(new ReportCommand());
 
       //GuiCommands:
 

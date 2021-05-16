@@ -42,6 +42,9 @@ commands:
   peaceful:
     description: Changes difficulty to peaceful
     usage: /<command>
+  report:
+    description: Sends a message to online admins
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:
