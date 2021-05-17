@@ -45,9 +45,6 @@ commands:
   report:
     description: Sends a message to online admins
     usage: /<command>
-  reports:
-    description: Options for reports
-    usage: /<command>
 
 ## Gui commands:
   worldmenu:
