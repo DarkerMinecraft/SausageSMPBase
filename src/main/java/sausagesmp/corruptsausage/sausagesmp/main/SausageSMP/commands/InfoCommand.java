@@ -32,6 +32,7 @@ public class InfoCommand implements CommandExecutor {
                 //If not staff, send this.
                 player.sendMessage(ChatColor.GREEN + "--------------------");
                 player.sendMessage(ChatColor.BLUE + "List of commands you have access to:");
+                player.sendMessage(ChatColor.GREEN + "/report (send a message to online staff)");
                 player.sendMessage(ChatColor.GREEN + "/info (Default)");
                 player.sendMessage(ChatColor.GREEN + "--------------------");
             }
