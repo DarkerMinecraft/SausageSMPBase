@@ -45,6 +45,9 @@ commands:
   report:
     description: Sends a message to online admins
     usage: /<command>
+  god:
+    description: Enables godmode
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:

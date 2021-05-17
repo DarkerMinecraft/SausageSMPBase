@@ -20,7 +20,11 @@ public final class main extends JavaPlugin {
     //Fly Command
     public ArrayList<Player> fly_list = new ArrayList<>();
 
+    //See vanished players
     public ArrayList<Player> see_vanish_list = new ArrayList<>();
+
+    //godmode players
+    public ArrayList<Player> godmode_list = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -55,6 +59,7 @@ public final class main extends JavaPlugin {
         this.getCommand("hard").setExecutor(new DifficultyHard());
         this.getCommand("peaceful").setExecutor(new DifficultyPeacefull());
         this.getCommand("report").setExecutor(new ReportCommand());
+        this.getCommand("god").setExecutor(new GodModeCommand(this));
 
       //GuiCommands:
 
