@@ -1,5 +1,6 @@
 package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc;
 
+import jdk.internal.icu.impl.CharTrie;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -20,6 +21,7 @@ public class GodModeCommand implements CommandExecutor {
         if(sender instanceof Player){
             Player p = (Player) sender;
             if(p.hasPermission("core.godmode") || p.hasPermission("core.staff")){
+                if(args.length == 0){
                     if(plugin.godmode_list.contains(p)){
                         p.setInvulnerable(false);
                         plugin.godmode_list.remove(p);
@@ -29,6 +31,21 @@ public class GodModeCommand implements CommandExecutor {
                         plugin.godmode_list.add(p);
                         p.sendMessage(ChatColor.AQUA + "Godmode has been enabled.");
                     }
+                }else{
+                    Player t = Bukkit.getPlayer(args[0]);
+                    if(plugin.godmode_list.contains(t)){
+                        t.setInvulnerable(false);
+                        plugin.godmode_list.remove(t);
+                        t.sendMessage(ChatColor.AQUA + "Godmode has been disabled.");
+                        p.sendMessage(ChatColor.AQUA + "Godmode has been disabled for: " + ChatColor.YELLOW + t.getDisplayName());
+                    }else if(!plugin.godmode_list.contains(t)){
+                        t.setInvulnerable(true);
+                        plugin.godmode_list.add(t);
+                        t.sendMessage(ChatColor.AQUA + "Godmode has been enabled.");
+                        p.sendMessage(ChatColor.AQUA + "Godmode has been enabled for: " + ChatColor.YELLOW + t.getDisplayName());
+                    }
+                }
+
 
 
             }else{
