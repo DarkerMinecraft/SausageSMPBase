@@ -12,7 +12,7 @@ public class HealCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
             Player p = (Player) sender;
-            if(p.hasPermission("core.heal")){
+            if(p.hasPermission("core.heal") || p.hasPermission("core.staff")){
                 if(args.length == 0){
                     if(p.getHealth() == 20){
                         p.sendMessage(ChatColor.RED + "You are already at full health.");

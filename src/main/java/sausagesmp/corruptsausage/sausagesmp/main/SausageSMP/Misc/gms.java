@@ -15,7 +15,7 @@ public class gms implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p = (Player) sender;
 
-        if(p.hasPermission("core.gamemode")){
+        if(p.hasPermission("core.gamemode") || p.hasPermission("core.staff")){
             if(args.length == 0){
                 if(p.getGameMode() == GameMode.SURVIVAL){
                     p.sendMessage(ChatColor.RED + "You are already in gamemode Survival.");

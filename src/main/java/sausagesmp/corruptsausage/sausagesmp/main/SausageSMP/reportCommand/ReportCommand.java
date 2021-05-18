@@ -13,12 +13,12 @@ public class ReportCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
             Player p = (Player) sender;
-            if(p.hasPermission("core.report.send")){
+            if(p.hasPermission("core.report.send") || p.hasPermission("core.staff")){
                 if(args.length == 0){
                     p.sendMessage(ChatColor.RED + "Format: /report <message>");
                 }else{
                     for(Player players : Bukkit.getOnlinePlayers()){
-                        if(players.hasPermission("core.report.receive")){
+                        if(players.hasPermission("core.report.receive") || p.hasPermission("core.staff")){
                             String message = "";
                                 for (int i = 1; i < args.length; i++){
                                     message += args[i] + " ";

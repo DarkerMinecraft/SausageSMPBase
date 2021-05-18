@@ -20,7 +20,7 @@ public class VanishCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player p = (Player) sender;
-            if (p.hasPermission("core.vanish")) {
+            if (p.hasPermission("core.vanish") || p.hasPermission("core.staff")) {
                 if (args.length == 0) {
                     if (plugin.vanish_list.contains(p)) {
                         for (Player players : Bukkit.getOnlinePlayers()) {

@@ -11,7 +11,7 @@ public class dayTimeCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
-        if(player.hasPermission("core.time")){
+        if(player.hasPermission("core.time") || player.hasPermission("core.staff")){
             player.getLocation().getWorld().setTime(1000);
             player.sendMessage(ChatColor.GREEN + "Time has been changed.");
         }else{

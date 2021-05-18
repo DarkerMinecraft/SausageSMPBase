@@ -14,7 +14,7 @@ public class DifficultyNormal implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
         if(sender instanceof Player){
-            if(player.hasPermission("core.difficulty")){
+            if(player.hasPermission("core.difficulty") || player.hasPermission("core.staff")){
                 if(player.getWorld().getDifficulty() == Difficulty.NORMAL){
                     player.sendMessage(ChatColor.RED + "Difficulty is already Normal in this world.");
                 }else{

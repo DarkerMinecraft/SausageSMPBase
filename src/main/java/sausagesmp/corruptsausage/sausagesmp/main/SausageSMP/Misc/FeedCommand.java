@@ -13,7 +13,7 @@ public class FeedCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
             Player p = (Player) sender;
-            if(p.hasPermission("core.feed")){
+            if(p.hasPermission("core.feed") || p.hasPermission("core.staff")){
                 if(args.length == 0){
                     if(p.getFoodLevel() == 20){
                         p.sendMessage(ChatColor.RED + "You are already at full hunger");

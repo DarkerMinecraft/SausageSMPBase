@@ -19,7 +19,7 @@ public class GodModeCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
             Player p = (Player) sender;
-            if(p.hasPermission("core.godmode")){
+            if(p.hasPermission("core.godmode") || p.hasPermission("core.staff")){
                     if(plugin.godmode_list.contains(p)){
                         p.setInvulnerable(false);
                         plugin.godmode_list.remove(p);

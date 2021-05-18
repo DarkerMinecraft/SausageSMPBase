@@ -20,7 +20,7 @@ public class FlyCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
             Player p = (Player) sender;
-            if(p.hasPermission("core.fly")){
+            if(p.hasPermission("core.fly") || p.hasPermission("core.staff")){
                 if(args.length == 0){
                     if(plugin.fly_list.contains(p)){
                         p.setAllowFlight(false);

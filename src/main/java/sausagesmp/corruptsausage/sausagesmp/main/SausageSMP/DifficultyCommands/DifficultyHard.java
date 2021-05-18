@@ -14,7 +14,7 @@ public class DifficultyHard implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
         if(sender instanceof Player){
-            if(player.hasPermission("core.difficulty")){
+            if(player.hasPermission("core.difficulty") || player.hasPermission("core.staff")){
                 if(player.getWorld().getDifficulty() == Difficulty.HARD){
                     player.sendMessage(ChatColor.RED + "Difficulty is already Hard in this world.");
                 }else{
