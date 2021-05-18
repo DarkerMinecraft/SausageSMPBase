@@ -60,6 +60,8 @@ public final class main extends JavaPlugin {
         this.getCommand("peaceful").setExecutor(new DifficultyPeacefull());
         this.getCommand("report").setExecutor(new ReportCommand());
         this.getCommand("god").setExecutor(new GodModeCommand(this));
+        this.getCommand("feed").setExecutor(new FeedCommand());
+        this.getCommand("heal").setExecutor(new HealCommand());
 
       //GuiCommands:
 

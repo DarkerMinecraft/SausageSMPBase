@@ -48,6 +48,12 @@ commands:
   god:
     description: Enables godmode
     usage: /<command>
+  feed:
+    description: Feeds to max hunger
+    usage: /<command>
+  heal:
+    description: Heales to max hp
+    usage: /<command>
 
 ## Gui commands:
   worldmenu:
