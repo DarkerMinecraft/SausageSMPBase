@@ -53,7 +53,6 @@ public final class main extends JavaPlugin {
         this.getCommand("vanish").setExecutor(new VanishCommand(this));
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
-        this.getCommand("info").setExecutor(new InfoCommand());
         this.getCommand("easy").setExecutor(new DifficultyEasy());
         this.getCommand("normal").setExecutor(new DifficultyNormal());
         this.getCommand("hard").setExecutor(new DifficultyHard());

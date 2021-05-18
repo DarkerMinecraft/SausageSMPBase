@@ -27,9 +27,6 @@ commands:
   fly:
     description: Enables/disables flight.
     usage: /<command>
-  info:
-    description: Gives information
-    usage: /<command>
   easy:
     description: Changes difficulty to easy
     usage: /<command>
