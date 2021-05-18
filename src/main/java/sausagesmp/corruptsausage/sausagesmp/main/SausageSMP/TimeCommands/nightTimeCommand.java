@@ -15,7 +15,7 @@ public class nightTimeCommand implements CommandExecutor {
             player.getLocation().getWorld().setTime(13000);
             player.sendMessage(ChatColor.GREEN + "Time has been changed.");
         }else{
-            player.sendMessage(ChatColor.RED + " You don't have access to this command.");
+            player.sendMessage(ChatColor.RED + "You don't have access to this command.");
         }
 
 
