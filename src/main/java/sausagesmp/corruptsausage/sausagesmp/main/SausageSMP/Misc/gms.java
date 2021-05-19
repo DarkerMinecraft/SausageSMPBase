@@ -21,30 +21,40 @@ public class gms implements CommandExecutor {
 
         if(p.hasPermission("core.gamemode") || p.hasPermission("core.staff")){
             if(args.length == 0){
-                for(Player players : Bukkit.getOnlinePlayers()){
-                    if(plugin.receive_logs_list.contains(players)){
-                        players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /gms");
-                    }
-                }
                 if(p.getGameMode() == GameMode.SURVIVAL){
                     p.sendMessage(ChatColor.RED + "You are already in gamemode Survival.");
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /gmc");
+                        }
+                    }
                 }else{
                     p.setGameMode(GameMode.SURVIVAL);
                     p.sendMessage(ChatColor.GREEN + "Gamemode has been changed to Survival.");
-                }
-            }else{
-                for(Player players : Bukkit.getOnlinePlayers()){
-                    if(plugin.receive_logs_list.contains(players)){
-                        players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /gms");
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /gmc");
+                        }
                     }
                 }
+            }else{
                 Player t = Bukkit.getServer().getPlayer(args[0]);
                 if(t.getGameMode() == GameMode.SURVIVAL){
                     p.sendMessage(ChatColor.RED + "This player is already in gamemode Survival.");
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /gmc");
+                        }
+                    }
                 }else{
                     p.sendMessage(ChatColor.GREEN + "Gamemode from " + ChatColor.YELLOW + t.getDisplayName() + ChatColor.GREEN + " Has been changed to Survival.");
                     t.setGameMode(GameMode.SURVIVAL);
                     t.sendMessage(ChatColor.YELLOW + "Your gamemode has been changed to Survival.");
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /gmc");
+                        }
+                    }
                 }
             }
         }else{
