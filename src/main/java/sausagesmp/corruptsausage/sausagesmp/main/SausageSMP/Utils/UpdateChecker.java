@@ -1,7 +1,7 @@
 package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils;
 
 import org.bukkit.Bukkit;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,10 +11,10 @@ import java.util.function.Consumer;
 
 public class UpdateChecker {
 
-    private main plugin;
+    private Main plugin;
     private int resourceId;
 
-    public UpdateChecker (main plugin, int resourceId){
+    public UpdateChecker (Main plugin, int resourceId){
         this.plugin = plugin;
         this.resourceId = resourceId;
     }

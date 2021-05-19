@@ -1,18 +1,17 @@
 package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc;
 
-import jdk.internal.icu.impl.CharTrie;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
 public class GodModeCommand implements CommandExecutor {
 
-    main plugin;
-    public GodModeCommand(main plugin){
+    Main plugin;
+    public GodModeCommand(Main plugin){
         this.plugin = plugin;
     }
 

@@ -6,12 +6,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
-public class nightTimeCommand implements CommandExecutor {
+public class NightTimeCommand implements CommandExecutor {
 
-    main plugin;
-    public nightTimeCommand(main plugin){this.plugin = plugin;}
+    Main plugin;
+    public NightTimeCommand(Main plugin){this.plugin = plugin;}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

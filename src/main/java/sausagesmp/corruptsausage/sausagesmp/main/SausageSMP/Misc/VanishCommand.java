@@ -6,13 +6,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
 public class VanishCommand implements CommandExecutor {
 
-    main plugin;
+    Main plugin;
 
-    public VanishCommand(main plugin) {
+    public VanishCommand(Main plugin) {
         this.plugin = plugin;
     }
 

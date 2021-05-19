@@ -4,15 +4,15 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.*;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.dayTimeCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.nightTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.DayTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.NightTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils.UpdateChecker;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
 
 import java.util.ArrayList;
 
-public final class main extends JavaPlugin {
+public final class Main extends JavaPlugin {
 
     //Vanish command
     public ArrayList<Player> vanish_list = new ArrayList<>();
@@ -49,10 +49,10 @@ public final class main extends JavaPlugin {
 
 
       //commands:
-        this.getCommand("gms").setExecutor(new gms(this));
-        this.getCommand("gmc").setExecutor(new gmc(this));
-        this.getCommand("day").setExecutor(new dayTimeCommand(this));
-        this.getCommand("night").setExecutor(new nightTimeCommand(this));
+        this.getCommand("gms").setExecutor(new Gms(this));
+        this.getCommand("gmc").setExecutor(new Gmc(this));
+        this.getCommand("day").setExecutor(new DayTimeCommand(this));
+        this.getCommand("night").setExecutor(new NightTimeCommand(this));
         this.getCommand("vanish").setExecutor(new VanishCommand(this));
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
