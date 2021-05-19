@@ -9,10 +9,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
-public class DifficultyPeacefull implements CommandExecutor {
+public class DifficultyPeaceful implements CommandExecutor {
 
     Main plugin;
-    public DifficultyPeacefull(Main plugin){this.plugin = plugin;}
+    public DifficultyPeaceful(Main plugin){this.plugin = plugin;}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

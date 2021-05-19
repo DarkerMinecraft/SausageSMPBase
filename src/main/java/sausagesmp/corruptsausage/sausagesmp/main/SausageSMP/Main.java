@@ -6,6 +6,7 @@ import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.difficulty_commands.
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.misc.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.DayTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.NightTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.ConfigUtils;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.UpdateChecker;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
@@ -33,22 +34,22 @@ public final class Main extends JavaPlugin {
     public void onEnable() {
         //check for updates:
         new UpdateChecker(this, 92295).getLatestVersion(version -> {
-            if(this.getDescription().getVersion().equalsIgnoreCase(version)){
+            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
                 System.out.println("Plugin is running latest version.");
-            }else{
+            } else {
                 System.out.println("Plugin has an update:");
                 System.out.println("Please download it at: https://www.spigotmc.org/resources/sausagesmp.92295/");
             }
         });
 
+        ConfigUtils.setupConfigUtils(this);
+
+        System.out.println("SausageSMP:");
+        System.out.println("Model: Base");
+        System.out.println("Status: Loaded and running.");
 
 
-      System.out.println("SausageSMP:");
-      System.out.println("Model: Base");
-      System.out.println("Status: Loaded and running.");
-
-
-      //commands:
+        //commands:
         this.getCommand("gms").setExecutor(new Gms(this));
         this.getCommand("gmc").setExecutor(new Gmc(this));
         this.getCommand("day").setExecutor(new DayTimeCommand(this));
@@ -56,31 +57,31 @@ public final class Main extends JavaPlugin {
         this.getCommand("vanish").setExecutor(new VanishCommand(this));
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
+        /** Readd this if you don't like my difficulty command
         this.getCommand("easy").setExecutor(new DifficultyEasy(this));
         this.getCommand("normal").setExecutor(new DifficultyNormal(this));
         this.getCommand("hard").setExecutor(new DifficultyHard(this));
-        this.getCommand("peaceful").setExecutor(new DifficultyPeacefull(this));
+        this.getCommand("peaceful").setExecutor(new DifficultyPeaceful(this));
+         **/
+        this.getCommand("difficulty").setExecutor(new DifficultyCommand(this));
         this.getCommand("report").setExecutor(new ReportCommand());
         this.getCommand("god").setExecutor(new GodModeCommand(this));
         this.getCommand("feed").setExecutor(new FeedCommand(this));
         this.getCommand("heal").setExecutor(new HealCommand(this));
         this.getCommand("togglelogs").setExecutor(new ToggleCommandLogging(this));
 
-      //GuiCommands:
+        //GuiCommands:
 
 
-      //Events:
+        //Events:
 
 
-
-      //Gui Events:
+        //Gui Events:
 
     }
 
 
-
     //Config
-
 
 
     @Override
