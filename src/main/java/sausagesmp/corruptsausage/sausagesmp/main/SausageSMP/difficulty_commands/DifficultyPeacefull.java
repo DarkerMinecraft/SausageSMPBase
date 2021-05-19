@@ -1,4 +1,4 @@
-package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands;
+package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.difficulty_commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,24 +9,24 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
-public class DifficultyHard implements CommandExecutor {
+public class DifficultyPeacefull implements CommandExecutor {
 
     Main plugin;
-    public DifficultyHard(Main plugin){this.plugin = plugin;}
+    public DifficultyPeacefull(Main plugin){this.plugin = plugin;}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
         if(sender instanceof Player){
             if(player.hasPermission("core.difficulty") || player.hasPermission("core.staff")){
-                if(player.getWorld().getDifficulty() == Difficulty.HARD){
-                    player.sendMessage(ChatColor.RED + "Difficulty is already Hard in this world.");
+                if(player.getWorld().getDifficulty() == Difficulty.PEACEFUL){
+                    player.sendMessage(ChatColor.RED + "Difficulty is already Peaceful in this world.");
                 }else{
-                    player.getWorld().setDifficulty(Difficulty.HARD);
+                    player.getWorld().setDifficulty(Difficulty.PEACEFUL);
 
                     for(Player players : Bukkit.getOnlinePlayers()){
                         if(plugin.receive_logs_list.contains(players)){
-                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + player.getDisplayName() + ChatColor.GRAY + " /hard");
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + player.getDisplayName() + ChatColor.GRAY + " /peaceful");
                         }
                     }
                 }

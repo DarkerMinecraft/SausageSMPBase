@@ -2,11 +2,11 @@ package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands.*;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Misc.*;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.DayTimeCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.TimeCommands.NightTimeCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils.UpdateChecker;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.difficulty_commands.*;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.misc.*;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.DayTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.NightTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.UpdateChecker;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
 

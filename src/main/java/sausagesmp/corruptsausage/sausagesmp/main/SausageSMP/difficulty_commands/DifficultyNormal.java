@@ -1,4 +1,4 @@
-package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.DifficultyCommands;
+package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.difficulty_commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

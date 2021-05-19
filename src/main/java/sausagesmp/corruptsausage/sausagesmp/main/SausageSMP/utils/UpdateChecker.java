@@ -1,4 +1,4 @@
-package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Utils;
+package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils;
 
 import org.bukkit.Bukkit;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
