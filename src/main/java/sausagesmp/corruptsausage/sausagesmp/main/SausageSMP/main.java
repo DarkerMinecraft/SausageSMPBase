@@ -49,21 +49,21 @@ public final class main extends JavaPlugin {
 
 
       //commands:
-        this.getCommand("gms").setExecutor(new gms());
-        this.getCommand("gmc").setExecutor(new gmc());
-        this.getCommand("day").setExecutor(new dayTimeCommand());
-        this.getCommand("night").setExecutor(new nightTimeCommand());
+        this.getCommand("gms").setExecutor(new gms(this));
+        this.getCommand("gmc").setExecutor(new gmc(this));
+        this.getCommand("day").setExecutor(new dayTimeCommand(this));
+        this.getCommand("night").setExecutor(new nightTimeCommand(this));
         this.getCommand("vanish").setExecutor(new VanishCommand(this));
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
-        this.getCommand("easy").setExecutor(new DifficultyEasy());
-        this.getCommand("normal").setExecutor(new DifficultyNormal());
-        this.getCommand("hard").setExecutor(new DifficultyHard());
-        this.getCommand("peaceful").setExecutor(new DifficultyPeacefull());
+        this.getCommand("easy").setExecutor(new DifficultyEasy(this));
+        this.getCommand("normal").setExecutor(new DifficultyNormal(this));
+        this.getCommand("hard").setExecutor(new DifficultyHard(this));
+        this.getCommand("peaceful").setExecutor(new DifficultyPeacefull(this));
         this.getCommand("report").setExecutor(new ReportCommand());
         this.getCommand("god").setExecutor(new GodModeCommand(this));
-        this.getCommand("feed").setExecutor(new FeedCommand());
-        this.getCommand("heal").setExecutor(new HealCommand());
+        this.getCommand("feed").setExecutor(new FeedCommand(this));
+        this.getCommand("heal").setExecutor(new HealCommand(this));
         this.getCommand("togglelogs").setExecutor(new ToggleCommandLogging(this));
 
       //GuiCommands:

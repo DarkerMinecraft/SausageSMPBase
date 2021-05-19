@@ -22,6 +22,11 @@ public class FlyCommand implements CommandExecutor {
             Player p = (Player) sender;
             if(p.hasPermission("core.fly") || p.hasPermission("core.staff")){
                 if(args.length == 0){
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /fly");
+                        }
+                    }
                     if(plugin.fly_list.contains(p)){
                         p.setAllowFlight(false);
                         plugin.fly_list.remove(p);
@@ -32,6 +37,11 @@ public class FlyCommand implements CommandExecutor {
                         p.sendMessage(ChatColor.GREEN + "Flight has been enabled.");
                     }
                 }else{
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /fly");
+                        }
+                    }
                     Player t = Bukkit.getServer().getPlayer(args[0]);
                     if(plugin.fly_list.contains(t)){
                         t.setAllowFlight(false);

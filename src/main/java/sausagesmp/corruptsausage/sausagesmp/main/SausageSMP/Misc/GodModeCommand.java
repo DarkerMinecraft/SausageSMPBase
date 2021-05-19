@@ -26,10 +26,20 @@ public class GodModeCommand implements CommandExecutor {
                         p.setInvulnerable(false);
                         plugin.godmode_list.remove(p);
                         p.sendMessage(ChatColor.AQUA + "Godmode has been disabled.");
+                        for(Player players : Bukkit.getOnlinePlayers()){
+                            if(plugin.receive_logs_list.contains(players)){
+                                players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /god");
+                            }
+                        }
                     }else if(!plugin.godmode_list.contains(p)){
                         p.setInvulnerable(true);
                         plugin.godmode_list.add(p);
                         p.sendMessage(ChatColor.AQUA + "Godmode has been enabled.");
+                        for(Player players : Bukkit.getOnlinePlayers()){
+                            if(plugin.receive_logs_list.contains(players)){
+                                players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /god");
+                            }
+                        }
                     }
                 }else{
                     Player t = Bukkit.getPlayer(args[0]);
@@ -38,11 +48,21 @@ public class GodModeCommand implements CommandExecutor {
                         plugin.godmode_list.remove(t);
                         t.sendMessage(ChatColor.AQUA + "Godmode has been disabled.");
                         p.sendMessage(ChatColor.AQUA + "Godmode has been disabled for: " + ChatColor.YELLOW + t.getDisplayName());
+                        for(Player players : Bukkit.getOnlinePlayers()){
+                            if(plugin.receive_logs_list.contains(players)){
+                                players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /god");
+                            }
+                        }
                     }else if(!plugin.godmode_list.contains(t)){
                         t.setInvulnerable(true);
                         plugin.godmode_list.add(t);
                         t.sendMessage(ChatColor.AQUA + "Godmode has been enabled.");
                         p.sendMessage(ChatColor.AQUA + "Godmode has been enabled for: " + ChatColor.YELLOW + t.getDisplayName());
+                        for(Player players : Bukkit.getOnlinePlayers()){
+                            if(plugin.receive_logs_list.contains(players)){
+                                players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /god");
+                            }
+                        }
                     }
                 }
 

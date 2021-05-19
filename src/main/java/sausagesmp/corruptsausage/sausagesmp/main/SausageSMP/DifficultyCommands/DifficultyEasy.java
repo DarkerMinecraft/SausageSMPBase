@@ -7,8 +7,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main;
 
 public class DifficultyEasy implements CommandExecutor {
+
+    main plugin;
+    public DifficultyEasy(main plugin){this.plugin = plugin;}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -21,8 +25,8 @@ public class DifficultyEasy implements CommandExecutor {
                     player.getWorld().setDifficulty(Difficulty.EASY);
 
                     for(Player players : Bukkit.getOnlinePlayers()){
-                        if(players.hasPermission("core.difficulty")){
-                            players.sendMessage(ChatColor.GREEN + "Difficulty changed to " + ChatColor.YELLOW + "Easy" + ChatColor.GREEN + " by: " + ChatColor.YELLOW + player.getDisplayName());
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + player.getDisplayName() + ChatColor.GRAY + " /easy");
                         }
                     }
                 }

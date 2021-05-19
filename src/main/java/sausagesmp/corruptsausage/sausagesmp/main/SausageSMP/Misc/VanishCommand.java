@@ -22,6 +22,11 @@ public class VanishCommand implements CommandExecutor {
             Player p = (Player) sender;
             if (p.hasPermission("core.vanish") || p.hasPermission("core.staff")) {
                 if (args.length == 0) {
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /vanish");
+                        }
+                    }
                     if (plugin.vanish_list.contains(p)) {
                         for (Player players : Bukkit.getOnlinePlayers()) {
                             players.showPlayer(plugin, p);
@@ -41,6 +46,11 @@ public class VanishCommand implements CommandExecutor {
                     }
 
                 } else {
+                    for(Player players : Bukkit.getOnlinePlayers()){
+                        if(plugin.receive_logs_list.contains(players)){
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + p.getDisplayName() + ChatColor.GRAY + " /vanish");
+                        }
+                    }
                     Player t = Bukkit.getServer().getPlayer(args[0]);
                     if (plugin.vanish_list.contains(t)) {
                         for (Player players : Bukkit.getOnlinePlayers()) {
