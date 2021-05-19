@@ -21,6 +21,9 @@ commands:
   vanish:
     description: Changes player visibility
     usage: /<command>
+  togglelogs:
+    description: Enables command logging for admins
+    usage: /<command>
   v:
     description: Shortcut for vanish
     usage: /<command>

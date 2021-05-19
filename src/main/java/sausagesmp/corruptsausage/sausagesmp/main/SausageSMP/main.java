@@ -26,6 +26,9 @@ public final class main extends JavaPlugin {
     //godmode players
     public ArrayList<Player> godmode_list = new ArrayList<>();
 
+    //Command logging for admins
+    public ArrayList<Player> receive_logs_list = new ArrayList<>();
+
     @Override
     public void onEnable() {
         //check for updates:
@@ -61,6 +64,7 @@ public final class main extends JavaPlugin {
         this.getCommand("god").setExecutor(new GodModeCommand(this));
         this.getCommand("feed").setExecutor(new FeedCommand());
         this.getCommand("heal").setExecutor(new HealCommand());
+        this.getCommand("togglelogs").setExecutor(new ToggleCommandLogging(this));
 
       //GuiCommands:
 
