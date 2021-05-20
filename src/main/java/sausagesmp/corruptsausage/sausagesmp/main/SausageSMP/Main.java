@@ -36,7 +36,7 @@ public final class Main extends JavaPlugin {
             if(this.getDescription().getVersion().equalsIgnoreCase(version)){
                 System.out.println("Plugin is up to date.");
             }else{
-                System.out.println("PLugin has an update.");
+                System.out.println("PLugin has an update!");
             }
         });
 
