@@ -1,5 +1,5 @@
 name: SausageSMP.main
-version: ${project.version}
+version: 1.0.2
 main: sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main
 api-version: 1.16
 authors: [ CorruptSausage ]
