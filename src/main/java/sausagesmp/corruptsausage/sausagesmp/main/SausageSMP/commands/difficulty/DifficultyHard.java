@@ -1,4 +1,4 @@
-package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.difficulty_commands;
+package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.difficulty;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,24 +9,24 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main;
 
-public class DifficultyNormal implements CommandExecutor {
+public class DifficultyHard implements CommandExecutor {
 
     Main plugin;
-    public DifficultyNormal(Main plugin){this.plugin = plugin;}
+    public DifficultyHard(Main plugin){this.plugin = plugin;}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
         if(sender instanceof Player){
             if(player.hasPermission("core.difficulty") || player.hasPermission("core.staff")){
-                if(player.getWorld().getDifficulty() == Difficulty.NORMAL){
-                    player.sendMessage(ChatColor.RED + "Difficulty is already Normal in this world.");
+                if(player.getWorld().getDifficulty() == Difficulty.HARD){
+                    player.sendMessage(ChatColor.RED + "Difficulty is already Hard in this world.");
                 }else{
-                    player.getWorld().setDifficulty(Difficulty.NORMAL);
+                    player.getWorld().setDifficulty(Difficulty.HARD);
 
                     for(Player players : Bukkit.getOnlinePlayers()){
                         if(plugin.receive_logs_list.contains(players)){
-                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + player.getDisplayName() + ChatColor.GRAY + " /normal");
+                            players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + player.getDisplayName() + ChatColor.GRAY + " /hard");
                         }
                     }
                 }
@@ -35,6 +35,7 @@ public class DifficultyNormal implements CommandExecutor {
                 player.sendMessage(ChatColor.RED + "You don't have access to this command.");
             }
         }
+
 
 
 
