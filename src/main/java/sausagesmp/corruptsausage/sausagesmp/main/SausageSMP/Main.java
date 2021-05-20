@@ -11,6 +11,7 @@ import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.UpdateChecker;
 
+
 import java.util.ArrayList;
 
 public final class Main extends JavaPlugin {
