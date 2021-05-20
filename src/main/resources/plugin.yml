@@ -1,5 +1,5 @@
 name: SausageSMP.main
-version: ${project.version}
+version: 1.0.2
 main: sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main
 api-version: 1.16
 authors: [ CorruptSausage ]
@@ -30,18 +30,6 @@ commands:
   fly:
     description: Enables/disables flight.
     usage: /<command>
-  easy:
-    description: Changes difficulty to easy
-    usage: /<command>
-  normal:
-    description: Changes difficulty to normal
-    usage: /<command>
-  hard:
-    description: Changes difficulty to hard
-    usage: /<command>
-  peaceful:
-    description: Changes difficulty to peaceful
-    usage: /<command>
   report:
     description: Sends a message to online admins
     usage: /<command>
@@ -53,6 +41,9 @@ commands:
     usage: /<command>
   heal:
     description: Heales to max hp
+    usage: /<command>
+  difficulty:
+    description: Changes server difficulty
     usage: /<command>
 
 ## Gui commands:

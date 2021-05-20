@@ -1,4 +1,4 @@
-package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands;
+package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.misc;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

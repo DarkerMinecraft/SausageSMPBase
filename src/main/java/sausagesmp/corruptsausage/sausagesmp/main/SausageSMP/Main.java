@@ -2,13 +2,11 @@ package sausagesmp.corruptsausage.sausagesmp.main.SausageSMP;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.difficulty_commands.*;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.misc.*;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.DayTimeCommand;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.NightTimeCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.difficulty.*;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.misc.*;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.report.ReportCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.time.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.ConfigUtils;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.UpdateChecker;
 
 
@@ -55,12 +53,6 @@ public final class Main extends JavaPlugin {
         this.getCommand("vanish").setExecutor(new VanishCommand(this));
         this.getCommand("v").setExecutor(new VanishCommand(this));
         this.getCommand("fly").setExecutor(new FlyCommand(this));
-        /** Readd this if you don't like my difficulty command
-        this.getCommand("easy").setExecutor(new DifficultyEasy(this));
-        this.getCommand("normal").setExecutor(new DifficultyNormal(this));
-        this.getCommand("hard").setExecutor(new DifficultyHard(this));
-        this.getCommand("peaceful").setExecutor(new DifficultyPeaceful(this));
-         **/
         this.getCommand("difficulty").setExecutor(new DifficultyCommand(this));
         this.getCommand("report").setExecutor(new ReportCommand());
         this.getCommand("god").setExecutor(new GodModeCommand(this));
