@@ -27,13 +27,21 @@ public class DifficultyCommand implements CommandExecutor  {
                             ((Player) sender).getWorld().setDifficulty(newDifficulty);
                             for(Player players : Bukkit.getOnlinePlayers()) {
                                 if (plugin.receive_logs_list.contains(players)) {
-                                    players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + ((Player) sender).getDisplayName() + ChatColor.GRAY + " /" + args[0]);
+                                    players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + ((Player) sender).getDisplayName() + ChatColor.GRAY + " /difficulty " + args[0]);
                                 }
                             }
+                            sender.sendMessage(ChatColor.GREEN + "Difficulty has been changed to " + args[0]);
                         } else sender.sendMessage(ChatColor.RED + "Difficulty is already " + args[0] + " in this world.");
                     }
                 } else sender.sendMessage(ChatColor.RED + "You don't have access to this command.");
-            } else sender.sendMessage(ChatColor.RED + "Please specify a difficulty");
+            } else{
+                sender.sendMessage(ChatColor.RED + "Please specify a difficulty: peaceful, easy, normal, hard");
+                for(Player players : Bukkit.getOnlinePlayers()) {
+                    if (plugin.receive_logs_list.contains(players)) {
+                        players.sendMessage(ChatColor.RED + "[LOGS] " + ChatColor.YELLOW + ((Player) sender).getDisplayName() + ChatColor.GRAY + " /difficulty");
+                    }
+                }
+            }
         } else sender.sendMessage("Console cannot use this command.");
         return true;
     }
