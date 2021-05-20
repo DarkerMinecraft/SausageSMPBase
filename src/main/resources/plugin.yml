@@ -1,6 +1,6 @@
 name: SausageSMP.main
-version: 1.1.0.0
-main: sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.main
+version: ${project.version}
+main: sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.Main
 api-version: 1.16
 authors: [ CorruptSausage ]
 description: Base
@@ -56,7 +56,5 @@ commands:
     usage: /<command>
 
 ## Gui commands:
-  worldmenu:
-    description: Opens world options/
-    usage: /<command>
+
 

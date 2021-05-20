@@ -7,9 +7,9 @@ import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.misc.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.DayTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.time_commands.NightTimeCommand;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.ConfigUtils;
-import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.UpdateChecker;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.commands.*;
 import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.reportCommand.ReportCommand;
+import sausagesmp.corruptsausage.sausagesmp.main.SausageSMP.utils.UpdateChecker;
 
 import java.util.ArrayList;
 
@@ -21,8 +21,6 @@ public final class Main extends JavaPlugin {
     //Fly Command
     public ArrayList<Player> fly_list = new ArrayList<>();
 
-    //See vanished players
-    public ArrayList<Player> see_vanish_list = new ArrayList<>();
 
     //godmode players
     public ArrayList<Player> godmode_list = new ArrayList<>();
@@ -32,13 +30,12 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        //check for updates:
+        //check for updates
         new UpdateChecker(this, 92295).getLatestVersion(version -> {
-            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
-                System.out.println("Plugin is running latest version.");
-            } else {
-                System.out.println("Plugin has an update:");
-                System.out.println("Please download it at: https://www.spigotmc.org/resources/sausagesmp.92295/");
+            if(this.getDescription().getVersion().equalsIgnoreCase(version)){
+                System.out.println("Plugin is up to date.");
+            }else{
+                System.out.println("PLugin has an update.");
             }
         });
 
